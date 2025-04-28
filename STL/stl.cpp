@@ -149,24 +149,113 @@ using namespace std;
 
 
 
-void explainQueue(){
-     queue<int> q;
-    q.push(9); //{9}
-    q.push(12); //{9, 12}
-    q.emplace(7); //{9, 12, 7}
+// void explainQueue(){
+//      queue<int> q;
+//     q.push(9); //{9}
+//     q.push(12); //{9, 12}
+//     q.emplace(7); //{9, 12, 7}
 
-    cout << q.front() << " ";
-    cout << q.back() << " ";
+//     cout << q.front() << " ";
+//     cout << q.back() << " ";
 
-    q.pop();
+//     q.pop();
 
-    cout << q.front() << " ";
-    cout << q.back() << " ";
+//     cout << q.front() << " ";
+//     cout << q.back() << " ";
 
-    q.back() += 6;
+//     q.back() += 6;
 
-    cout << q.back();
-    }
+//     cout << q.back();
+// }
+
+
+
+// void explainPq(){
+//     priority_queue<int> pq;
+//     pq.push(10);
+//     pq.push(8);
+//     pq.emplace(19);
+
+//     cout << pq.top() << " ";
+
+//     pq.pop();
+
+//     cout << pq.top() << " ";
+
+//     //If we want minimum heap
+//     priority_queue<int, vector<int>, greater<int>> pq1;
+//     pq1.push(8);
+//     pq1.push(4);
+//     pq1.push(19);
+
+//     cout << pq1.top() << " ";
+// }
+
+
+void explainSet(){
+    set<int> se;
+    se.insert(10);
+    se.insert(4);
+    se.insert(5);
+    se.emplace(7);
+    se.insert(7);
+    se.insert(2);
+    //{2, 4, 5, 7, 10}
+
+    //begin(), end(), rbegin(), rend(), size() are same as others
+
+    auto it = se.find(10);
+
+    auto it = se.find(100); //Genrally it points to the se.end() whichis after the last element
+
+    se.erase(10);
+
+    int cnt = se.count(1);
+
+    auto it1 = se.find(4);
+    auto it2 = se.find(10);
+    se.erase(it1, it2); // It takes constant time
+
+    auto it = se.lower_bound(12); //Look notes 
+
+    auto it = se.upper_bound(10);
+
+}
+
+
+
+void explainMultiSet(){
+// It allows duplicates and it allows Lower and upper bound functions
+    multiset<int> mst;
+    
+    mst.insert(1);
+    mst.insert(3);
+    mst.insert(4);
+    mst.insert(7);
+    mst.emplace(4);
+    mst.insert(9);
+
+    mst.erase(7); //It will erase all elements where  7 contains
+
+    int cnt = mst.count(7); 
+
+    mst.erase(mst.find(7)); //Only a single 7 one will be erased
+
+    mst.erase(mst.find(7), mst.find((7)+2)); //froms set{7, 7, 7, 5, 6} it delets {7,7} it means 7 upto 2 occurences
+}
+
+
+
+
+void explainUset(){
+    unordered_set<int> uset;
+    //It is same as set but the only difference is 
+    //The lower bound and upper bound will not work here 
+    //It does not stores the values in any particular oreder
+    //It has a time complexity of O(n) in rare cases with intentionally worst case will occur
+    
+}
+
 
 
 
@@ -176,6 +265,10 @@ int main(){
     // explainlist();
     // explaindeque();
     // explainStack();
-    explainQueue();
+    // explainQueue();
+    // explainPq();
+    // explainSet();
+    // explainMultiSet();
+    explainUset();
     return 0;
 }
