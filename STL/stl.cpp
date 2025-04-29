@@ -11,6 +11,8 @@ using namespace std;
 // }
 
 
+
+
 // void explainVector(){
 //     vector<int> v;
 //     v.push_back(2);
@@ -109,6 +111,7 @@ using namespace std;
 
 
 
+
 // void explaindeque(){
 //     deque<int> dq;
 //     dq.push_back(19);   //{19}
@@ -124,6 +127,7 @@ using namespace std;
 //     cout << dq.back() << " ";
     
 // }
+
 
 
 
@@ -149,6 +153,7 @@ using namespace std;
 
 
 
+
 // void explainQueue(){
 //      queue<int> q;
 //     q.push(9); //{9}
@@ -167,6 +172,7 @@ using namespace std;
 
 //     cout << q.back();
 // }
+
 
 
 
@@ -192,69 +198,154 @@ using namespace std;
 // }
 
 
-void explainSet(){
-    set<int> se;
-    se.insert(10);
-    se.insert(4);
-    se.insert(5);
-    se.emplace(7);
-    se.insert(7);
-    se.insert(2);
-    //{2, 4, 5, 7, 10}
-
-    //begin(), end(), rbegin(), rend(), size() are same as others
-
-    auto it = se.find(10);
-
-    auto it = se.find(100); //Genrally it points to the se.end() whichis after the last element
-
-    se.erase(10);
-
-    int cnt = se.count(1);
-
-    auto it1 = se.find(4);
-    auto it2 = se.find(10);
-    se.erase(it1, it2); // It takes constant time
-
-    auto it = se.lower_bound(12); //Look notes 
-
-    auto it = se.upper_bound(10);
-
-}
 
 
 
-void explainMultiSet(){
-// It allows duplicates and it allows Lower and upper bound functions
-    multiset<int> mst;
+// void explainSet(){
+//     set<int> se;
+//     se.insert(10);
+//     se.insert(4);
+//     se.insert(5);
+//     se.emplace(7);
+//     se.insert(7);
+//     se.insert(2);
+//     //{2, 4, 5, 7, 10}
+
+//     //begin(), end(), rbegin(), rend(), size() are same as others
+
+//     auto it = se.find(10);
+
+//     auto it = se.find(100); //Genrally it points to the se.end() whichis after the last element
+
+//     se.erase(10);
+
+//     int cnt = se.count(1);
+
+//     auto it1 = se.find(4);
+//     auto it2 = se.find(10);
+//     se.erase(it1, it2); // It takes constant time
+
+//     auto it = se.lower_bound(12); //Look notes 
+
+//     auto it = se.upper_bound(10);
+
+// }
+
+
+
+
+
+// void explainMultiSet(){
+// // It allows duplicates and it allows Lower and upper bound functions
+//     multiset<int> mst;
     
-    mst.insert(1);
-    mst.insert(3);
-    mst.insert(4);
-    mst.insert(7);
-    mst.emplace(4);
-    mst.insert(9);
+//     mst.insert(1);
+//     mst.insert(3);
+//     mst.insert(4);
+//     mst.insert(7);
+//     mst.emplace(4);
+//     mst.insert(9);
 
-    mst.erase(7); //It will erase all elements where  7 contains
+//     mst.erase(7); //It will erase all elements where  7 contains
 
-    int cnt = mst.count(7); 
+//     int cnt = mst.count(7); 
 
-    mst.erase(mst.find(7)); //Only a single 7 one will be erased
+//     mst.erase(mst.find(7)); //Only a single 7 one will be erased
 
-    mst.erase(mst.find(7), mst.find((7)+2)); //froms set{7, 7, 7, 5, 6} it delets {7,7} it means 7 upto 2 occurences
-}
-
-
+//     mst.erase(mst.find(7), mst.find((7)+2)); //froms set{7, 7, 7, 5, 6} it delets {7,7} it means 7 upto 2 occurences
+// }
 
 
-void explainUset(){
-    unordered_set<int> uset;
-    //It is same as set but the only difference is 
-    //The lower bound and upper bound will not work here 
-    //It does not stores the values in any particular oreder
-    //It has a time complexity of O(n) in rare cases with intentionally worst case will occur
+
+
+
+// void explainUset(){
+//     unordered_set<int> uset;
+//     //It is same as set but the only difference is 
+//     //The lower bound and upper bound will not work here 
+//     //It does not store the values in any particular order
+//     //It has a time complexity of O(n) in rare cases with intentionally worst case will happen
     
-}
+// }
+
+
+
+
+
+// void explainMap(){
+//     //Time Complexity is O(1) in rare cases O(n)
+//     map<int, int> mpp;
+//     //map<int, pair<int , int>> mpp;
+//     //map<pair<int, int>, <int> mpp;
+
+//     mpp[1] = 5; 
+//     mpp.emplace(3, 6);
+//     mpp.insert({2, 4});
+    
+
+//     cout << mpp[3];
+//     cout << mpp[5];  //Prints 0
+// //The result is in sorted order of keys
+//     // for(auto it : mpp){
+//     //     cout <<  it.first << " " << it.second << " " << endl ;
+//     // }
+
+//     auto it = mpp.find(1);
+//     cout << it->first;
+
+//     auto it2 = mpp.lower_bound(2);
+//     auto it3 = mpp.upper_bound(3);
+
+// }
+
+
+
+
+
+// bool comp(pair<int, int> p1, pair<int, int> p2){
+//     if(p1.second < p2.first) return true;
+//     if(p1.second > p2.second) return false;
+
+//     if(p1.first > p2.first) return true;
+//     return false;
+// }
+
+
+
+
+
+// void explainExtra(){
+//     sort(a, a+n); //n is the size
+//     sort(v.begin(), v.end(); //In case of vectors)
+//     sort(a+2, a+4); //IF you wanted to sort specific region
+
+//     sort(a, a+n, greater<int>);//Sorts in descending order
+
+//     pair<int, int> a[] = {{1, 2}, {2, 1}, {4, 1}};
+//     //If we wanted to sort according to our own way
+//     //Sort the elements based on second element
+//     //If the second element is same then 
+//     //sort the elements based on the first element in descending order
+
+//     sort(a, a+n, comp)
+
+
+    // int num1 = 7;
+    // int cnt1 = __builtin_popcount(num1);
+    
+    // long long num2  = 14343234423;
+    // int cnt2 = __builtin_popcountll(num2);
+
+    // string s = "123";
+    // //If i want all the permutations of it
+    // do{
+    //     cout << s << endl;
+    // } while(next_permutation(s.begin(), s.end()));
+
+    // int maxi = *max_element(a, a+n);
+
+// }
+
 
 
 
@@ -269,6 +360,8 @@ int main(){
     // explainPq();
     // explainSet();
     // explainMultiSet();
-    explainUset();
+    // explainUset();
+    // explainMap();
+    // explainExtra();
     return 0;
 }
