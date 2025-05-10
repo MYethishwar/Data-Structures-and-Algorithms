@@ -30,3 +30,65 @@
 *.exe
 *.out
 *.app
+
+# VSCode workspace settings and folders
+.vscode/
+*.code-workspace
+
+# JSON files (if not required)
+*.json
+
+# CMake build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+*.cmake
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.swp
+*.swn
+
+# Logs
+*.log
+
+# Dependency folders
+node_modules/
+bower_components/
+
+# Debug and Release folders
+Debug/
+Release/
+
+# Other IDE files
+*.user
+*.ncb
+*.sdf
+*.suo
+*.opendb
+*.tlog
+
+# Package files
+*.tar
+*.gz
+*.zip
+
+# IDE project files
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.sln
+*.dsw
+*.dsp
+
+# Coverage files
+*.gcda
+*.gcno
+*.gcov
+
+# Python cache files (if using Python scripts)
+__pycache__/
+*.pyc
