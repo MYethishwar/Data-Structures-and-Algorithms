@@ -207,30 +207,106 @@ using namespace std;
 
 
 
-// Leetcode solution
+// // Leetcode solution
 
-// class Solution {
-// public:
-//     bool isPalindrome(string s) {
-//         string cleaned = "";
+// // Recursive function to check if a string is a palindrome
+// bool checkPalindrome(string s, int left) {
+//     if (left >= s.size()/2) {
+//         return true;
+//     }
+//     if (s[left] != s[s.size() - left  - 1]) {
+//         return false;
+//     }
+//     return checkPalindrome(s, left + 1);
+// }
 
-//         for (char c : s) {
-//             if (isalnum(c)) {
-//                 cleaned += tolower(c);
-//             }
+// // Main function to clean the string and check for palindrome
+// bool isPalindrome(string s) {
+//     string cleaned = "";
+
+//     for (char c : s) {
+//         if (isalnum(c)) {
+//             cleaned += tolower(c);
 //         }
-//         return checkPalindrome(cleaned, 0, cleaned.size() - 1);
 //     }
 
-// private:
-//     bool checkPalindrome(const string& s, int left, int right) {
-//         if (left >= right) {
-//             return true;
-//         }
-//         if (s[left] != s[right]) {
-//             return false;
-//         }
-//         return checkPalindrome(s, left + 1, right - 1);
-//     }
-// };
+//     return checkPalindrome(cleaned, 0);
+// }
 
+// int main() {
+//     string input = "malayalam";
+
+//     if (isPalindrome(input)) {
+//         cout << "The string is a palindrome." << endl;
+//     } else {
+//         cout << "The string is NOT a palindrome." << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+// Fibanocci series without recursion
+// int fib(int n) {
+    // if (n == 0) {
+    // cout << 0 << " ";
+    // return 0;
+    // }
+    // if (n == 1) {
+    //     cout << 0 << " 1 ";
+    //     return 1;
+    // }
+    // int first = 0, second = 1;
+    // int current = 0;
+    // cout << first << " ";
+    // cout << second << " ";
+    // for (int i = 2; i <= n; i++) {
+    //     current = first + second;
+    //     first = second;
+    //     second = current;
+    //     cout << current << " ";
+    // }
+    // return current;
+// }
+// int main(){
+//     fib(1);
+// }
+
+
+
+
+
+// Fibanocci without recursion using arrays
+// int main(){
+//     int size;
+//     cin >> size;
+//     int series[size];
+//     series[0] = 0;
+//     series[1] = 1;
+//     cout << series[0] << " " << series[1] <<" ";
+//     for(int i = 2; i < size; i++){
+//         series[i] = series[i-1] + series[i-2];
+//         cout << series[i] << " ";
+//     }
+// }
+
+
+
+
+
+int fib(int n){
+    if(n <= 1){
+        return n;
+    }
+    int second = fib(n - 1);
+    int first = fib(n - 2);
+    return first + second;
+}
+int main(){
+    int n;
+    cin >> n;
+    cout << fib(n);
+}
