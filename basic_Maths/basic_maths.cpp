@@ -76,67 +76,67 @@ void palindrome(int n){
 
 
 
-    void armstrong(int n){
-        int num = n;
-        int result = 0;
-        int length = log10(num) + 1;
-        while(n> 0){
-            int last_digit = n % 10;
-            n = n/10;
-            result = result + pow(last_digit, length);
-            cout << result << " ";
-        }
-        if(result == num){
-            cout << "Armstrong Number";
-        }
-        else{
-            cout << "Not a Armstrong Number";
-        }
-    }
-
-
-
-
-void printAllDivisors(int n){
-    vector<int> result;
+void armstrong(int n){
     int num = n;
-    for(int i = 1; i * i <=num; i++){
-        if(num % i == 0){
-            result.push_back(i);
-            if(i != n/i){
-                result.push_back(n/i);
-            }
-        }   
-       
+    int result = 0;
+    int length = log10(num) + 1;
+    while(n> 0){
+        int last_digit = n % 10;
+        n = n/10;
+        result = result + pow(last_digit, length);
+        cout << result << " ";
     }
-    std::sort(result.begin(), result.end());
-    for(auto it: result){
-        cout << it << " ";
+    if(result == num){
+        cout << "Armstrong Number";
+    }
+    else{
+        cout << "Not a Armstrong Number";
     }
 }
 
 
 
 
-void checkPrime(int n){
-    int count =  0;
-    for(int i=1; i * i <= n; i++){
-        if(n % i == 0){
-            count++;
-                if(n/i != i){
-                    count++;
-                }
+void printAllDivisors(int n){
+vector<int> result;
+int num = n;
+for(int i = 1; i * i <=num; i++){
+    if(num % i == 0){
+        result.push_back(i);
+        if(i != n/i){
+            result.push_back(n/i);
         }
+    }   
+    
+}
+std::sort(result.begin(), result.end());
+for(auto it: result){
+    cout << it << " ";
+}
+}
+
+
+
+
+void checkPrime(int n){
+int count =  0;
+for(int i=1; i * i <= n; i++){
+    if(n % i == 0){
+        count++;
+            if(n/i != i){
+                count++;
+            }
     }
-    //If counts equals to 2 its a prime because a prime number can only divisible 
-    //Exactly 1 and itself so there exists only 2 factors.
-    cout << "Count: " << count << endl; 
-    if(count == 2){
-        cout << "It's a Prime Number";
-    }
-    else{
-        cout << "It's Not a Prime Number";
-    }
+}
+//If counts equals to 2 its a prime because a prime number can only divisible 
+//Exactly 1 and itself so there exists only 2 factors.
+cout << "Count: " << count << endl; 
+if(count == 2){
+    cout << "It's a Prime Number";
+}
+else{
+    cout << "It's Not a Prime Number";
+}
 }
 
 
@@ -159,7 +159,7 @@ void gcd(){
         }
     }
     cout << "Highest Common Factor is: " << gcd;
-   
+
 }
 
 

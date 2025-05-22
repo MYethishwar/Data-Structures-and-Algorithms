@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
 // void explainpair(){
 //     pair<int,int> p = {12,45};
@@ -66,26 +66,26 @@ using namespace std;
     
 //     v.erase(v.begin()+2, v.begin()+4); // From (10, 23, 14, 4, 5) It deletes (14,4) 
 
-//INSERT FUNCTION
-//         vector<int>v(2,100); //{100, 100}
-//         v.insert(v.begin(),300); //{300, 100, 100}
-//         v.insert(v.begin()+1, 2, 10); //{300, 10, 10, 100, 100}
+// // INSERT FUNCTION
+//     vector<int>v(2,100); //{100, 100}
+//     v.insert(v.begin(),300); //{300, 100, 100}
+//     v.insert(v.begin()+1, 2, 10); //{300, 10, 10, 100, 100}
 
-//         vector<int> vcopy(2, 50); //{50, 50}
-//         v.insert(v.begin(), vcopy.begin(), vcopy.end());  //{50, 50, 300, 10, 10, 100, 100}
+//     vector<int> vcopy(2, 50); //{50, 50}
+//     v.insert(v.begin(), vcopy.begin(), vcopy.end());  //{50, 50, 300, 10, 10, 100, 100}
 
 
-//         //To print the size of the vector
-//         cout << v.size();
+//     //To print the size of the vector
+//     cout << v.size();
 
-//         for(auto it: v){
-//             cout << it << " ";
-//         }
+//     for(auto it: v){
+//         cout << it << " ";
+//     }
 
-//         v.pop_back(); //From {1, 5} it removes {5}
-//         v1.swap(v2);  // if v1 = {2, 3} & v2 = {4, 5} then it swaps v1 = {4, 5} & v2 = {2, 3}
-//         v.clear(); //Erases the entire vector
-//         v.empty(); //If vector is empty - True or else False
+//     v.pop_back(); //From {1, 5} it removes {5}
+//     v1.swap(v2);  // if v1 = {2, 3} & v2 = {4, 5} then it swaps v1 = {4, 5} & v2 = {2, 3}
+//     v.clear(); //Erases the entire vector
+//     v.empty(); //If vector is empty - True or else False
 
 // }
 
@@ -195,7 +195,7 @@ using namespace std;
 //     pq1.push(19);
 
 //     cout << pq1.top() << " ";
-// }
+//     }
 
 
 
@@ -330,19 +330,19 @@ using namespace std;
 //     sort(a, a+n, comp)
 
 
-    // int num1 = 7;
-    // int cnt1 = __builtin_popcount(num1);
+//     int num1 = 7;
+//     int cnt1 = __builtin_popcount(num1);
     
-    // long long num2  = 14343234423;
-    // int cnt2 = __builtin_popcountll(num2);
+//     long long num2  = 14343234423;
+//     int cnt2 = __builtin_popcountll(num2);
 
-    // string s = "123";
-    // //If i want all the permutations of it
-    // do{
-    //     cout << s << endl;
-    // } while(next_permutation(s.begin(), s.end()));
+//     string s = "123";
+//     //If i want all the permutations of it
+//     do{
+//         cout << s << endl;
+//     } while(next_permutation(s.begin(), s.end()));
 
-    // int maxi = *max_element(a, a+n);
+//     int maxi = *max_element(a, a+n);
 
 // }
 
@@ -350,18 +350,18 @@ using namespace std;
 
 
 
-int main(){
-    // explainpair();
-    // explainVector();
-    // explainlist();
-    // explaindeque();
-    // explainStack();
-    // explainQueue();
-    // explainPq();
-    // explainSet();
-    // explainMultiSet();
-    // explainUset();
-    // explainMap();
-    // explainExtra();
-    return 0;
-}
+// int main(){
+//     // explainpair();
+//     // explainVector();
+//     // explainlist();
+//     // explaindeque();
+//     // explainStack();
+//     // explainQueue();
+//     // explainPq();
+//     // explainSet();
+//     // explainMultiSet();
+//     // explainUset();
+//     // explainMap();
+//     // explainExtra();
+//     return 0;
+// }

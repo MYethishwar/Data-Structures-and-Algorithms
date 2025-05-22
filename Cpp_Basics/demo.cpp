@@ -1,197 +1,130 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    
-    
-  
+// Function 1: Print name
+void printName(string n) {
+    cout << "Hello " << n << "\n";
+}
 
+// Function 2: Return sum of two numbers
+int printSum(int a, int b) {
+    return a + b;
+}
+
+// Function 3: Pass by value
+void doSomething(string s) {
+    s[0] = 'T';
+    cout << "doSomething (pass by value): " << s << "\n";
+}
+
+// Function 4: Pass by reference
+void doSomethingRef(string &s) {
+    s[0] = 'T';
+    cout << "doSomething (pass by reference): " << s << "\n";
+}
+
+int main() {
+    // 1. Name input and display
     string name;
+    cout << "Enter your name: ";
     cin >> name;
-    cout << "The name you typed is : " << name;
+    cout << "The name you typed is: " << name << "\n";
 
-    string x1, x2, x3;
-    cin >> x1;
-    cin >> x2;
-    cin >> x3;
-    cout << "My string1 is: " << x1 << "My string 2 is: " << x2 << "String3 is: " << x3;
+    // 2. Grade classification
+    int grade;
+    cout << "Enter your grade: ";
+    cin >> grade;
 
+    if (grade >= 80 && grade <= 100) {
+        cout << grade << " Outstanding!! A\n";
+    } else if (grade >= 60) {
+        cout << grade << " Very Good!! B\n";
+    } else if (grade >= 50) {
+        cout << grade << " Good!! C\n";
+    } else if (grade >= 45) {
+        cout << grade << " Poor!! D\n";
+    } else if (grade >= 25) {
+        cout << grade << " Very Poor!! E\n";
+    } else {
+        cout << "Fail!!!!\n";
+    }
+
+    // 3. Job eligibility
+    int age;
+    cout << "Enter your age: ";
+    cin >> age;
+
+    if (age < 18) {
+        cout << "Not eligible for job.\n";
+    } else if (age <= 57) {
+        cout << "You are eligible for job!";
+        if (age > 55) {
+            cout << " Retirement soon.\n";
+        } else {
+            cout << "\n";
+        }
+    } else {
+        cout << "Your retirement age is over!\n";
+    }
+
+    // 4. Switch case for days
+    int day;
+    cout << "Enter day number (1-7): ";
+    cin >> day;
+
+    switch(day) {
+        case 1: cout << "Monday\n"; break;
+        case 2: cout << "Tuesday\n"; break;
+        case 3: cout << "Wednesday\n"; break;
+        case 4: cout << "Thursday\n"; break;
+        case 5: cout << "Friday\n"; break;
+        case 6: cout << "Saturday\n"; break;
+        case 7: cout << "Sunday\n"; break;
+        default: cout << "Invalid day!\n";
+    }
+
+    // 5. Arrays
+    int arr[10] = {1, 2, 3, 4, 5, 67, 8, 9, 34, 0};
+    cout << "Element at index 6: " << arr[6] << "\n";
+
+    // 6. String and its length
     string str;
-    getline(cin, str);
-    cout << str;
-    
-//     int grade;
-//     cin >> grade;
-//     if (grade >= 80 and grade <= 100){ 
-//         cout << grade << " Outstanding!! A";
-//     }
-//     else if(grade <= 79 and grade >= 60){
-//         cout << grade << " Very Good!! B";
-//     }
-//     else if(grade <= 59 and grade >= 50){
-//         cout << grade << " Good!! C";
-//     }
-//     else if(grade <= 49 and grade >= 45){
-//         cout << grade << " Poor!! D";
-//     }
-//     else if(grade <= 44 and grade >= 25){
-//         cout << grade << " Very Poor!! E";
-//     }
-//     else {
-//         cout << " Fail!!!!";
-//     }
+    cout << "Enter a string: ";
+    cin >> str;
+    cout << "Length of string: " << str.size() << "\n";
+    if (str.size() >= 4)
+        cout << "Characters at [0] and [3]: " << str[0] << ", " << str[3] << "\n";
+    else
+        cout << "String is too short for index 3.\n";
 
+    // 7. For loop
+    for (int i = 0; i < 10; i++) {
+        cout << "yethishwar" << i << "\n";
+    }
 
-// // Effective Approach
-//     int grade;
-//     cin >> grade;
-//     if (grade < 25){ 
-//         cout << grade << "F";
-//     }
-//     else if(grade <= 44){
-//         cout << grade << "E";
-//     }
-//     else if(grade <= 49){
-//         cout << grade << "D";
-//     }
-//     else if(grade <= 59){
-//         cout << grade << "C";
-//     }
-//     else if(grade <= 79){
-//         cout << grade << "B";
-//     }
-//     else {
-//         cout << "A Outstanding!!!!";
-//     }
+    // 8. Function to print name
+    printName(name);
 
+    // 9. Function to print sum
+    int num1, num2;
+    cout << "Enter two numbers to add: ";
+    cin >> num1 >> num2;
+    int result = printSum(num1, num2);
+    cout << "SUM is: " << result << "\n";
 
-//     int age;
-//     cin >> age;
-//     if (age < 18){
-//         cout << "Not eligible for Job";
-//     }
-//     else if(age <= 57){
-//         cout << "You are eligible for job!";
-//         if(age > 55){
-//             cout << ", Retirement soon";
-//         }
-//     else{
-//         cout << "You retiirement age is over!";
-//     }
-//     }
+    // 10. Pass by value
+    string s1 = "Raja";
+    doSomething(s1);
+    cout << "Main after pass by value: " << s1 << "\n";
 
-// // SWITCH
-//     int day;
-//     cin >> day;
+    // 11. Pass by reference
+    string s2 = "Raja";
+    doSomethingRef(s2);
+    cout << "Main after pass by reference: " << s2 << "\n";
 
-//     switch(day) {
-//         case 1:
-//             cout << "Monday!";
-//             break;
-//         case 2:
-//             cout << "Tuesday!";
-//             break;
-//         case 3:
-//             cout << "Wednesday!";
-//             break;
-//         case 4:
-//             cout << "Thrusday!";
-//             break;
-//         case 5:
-//             cout << "Friday!";
-//             break;
-//         case 6:
-//             cout << "Saturday!";
-//             break;
-//         case 7:
-//             cout << "Sunday!";
-//             break;
-//         default:
-//             cout << "Please enter a valid day number";
-//     }
-
-
-// ARRAYS
-
-    int  arr[10] = {1, 2, 3, 4, 5, 67, 8, 9, 34};
-    cout << arr[6];
-    
-// // STRING SLICES
-
-//     string str;
-//     cin >> str;
-//     int len = str.size();
-//     cout << len;
-//     cout << str[0] << str[3];
-    
-
-// // FOR LOOPS
-
-//     for (int i = 0;i < 10 ; i++) {
-//         cout << "yethishwar" << i << "\n";
-//     } 
-
-
-// // FUNCTIONS 1
-
-// void printName(string n){
-//     cout << "Hello " << n;
-// }
-// int main() { 
-//     string name;
-//     cin >> name;
-//     printName(name);
-//     return 0;
-// }
-
-
-// // FUNCTIONS 2
-
-// int printSum(int a, int b){
-//     int result = a + b;
-//     return result;
-// }
-// int main() {
-//     int num1, num2;
-//     cin >> num1 >> num2;
-//     int result = printSum(num1, num2);
-//     cout << "SUM is: " << result;
-//     return 0;
-// }
-
-
-// // FUNCTION 3(Pass by value)
-
-// void doSomething(string s){
-//     s[0] = 'T';
-//     cout << "doSomething function " << s << "\n";
-// }
-
-// int main(){
-//     string s= "Raja";
-//     doSomething(s);
-//     cout << "Main Function " << s << "\n";
-// }
-
-
-
-// // FUNCTION 3(Pass by value)
-
-// void doSomething(string &s){
-//     s[0] = 'T';
-//     cout << "doSomething function " << s << "\n";
-// }
-
-// int main(){
-//     string s= "Raja";
-//     doSomething(s);
-//     cout << "Main Function " << s << "\n";
-// }
-
-
-// int main(){
-//     int x = 'A';
-//     cout << x ;
+    // 12. Character to integer
+    int x = 'A';
+    cout << "ASCII value of 'A' is: " << x << "\n";
 
     return 0;
 }
