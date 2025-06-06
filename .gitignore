@@ -1,94 +1,50 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# ❌ Compiled object files
 *.o
 *.obj
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# ❌ Executables
 *.exe
 *.out
 *.app
 
-# VSCode workspace settings and folders
-.vscode/
-*.code-workspace
+# ❌ C++ headers and precompiled headers
+*.gch
+*.pch
 
-# JSON files (if not required)
-*.json
-
-# CMake build files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-build/
-*.cmake
-
-# Backup and temporary files
+# ❌ Backup and temporary files
 *.bak
 *.tmp
 *.swp
-*.swn
+*.swo
+*~
 
-# Logs
+# ❌ Log files
 *.log
 
-# Dependency folders
-node_modules/
-bower_components/
+# ❌ Editor and IDE files
+.vscode/
+*.code-workspace
 
-# Debug and Release folders
-Debug/
-Release/
+# ❌ CMake and Make build files
+build/
+Makefile
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles/
+*.cmake
 
-# Other IDE files
-*.user
-*.ncb
-*.sdf
-*.suo
-*.opendb
-*.tlog
+# ❌ Dependency files
+*.d
 
-# Package files
-*.tar
-*.gz
-*.zip
+# ❌ Input/output test case files (optional)
+input.txt
+output.txt
+*.in
+*.out
 
-# IDE project files
-*.vcxproj
-*.vcxproj.user
-*.vcxproj.filters
-*.sln
-*.dsw
-*.dsp
+# ❌ JSON files (if not required in version control)
+*.json
 
-# Coverage files
-*.gcda
-*.gcno
-*.gcov
-
-# Python cache files (if using Python scripts)
-__pycache__/
-*.pyc
+# ❌ CLion / JetBrains IDEs (optional)
+.idea/
+cmake-build-*/
